@@ -1,9 +1,35 @@
 import React from "react";
+import { FaRegFileAlt } from "react-icons/fa";
+import { LuDownload } from "react-icons/lu";
+import { IoClose } from "react-icons/io5";
 
-const Card = () => {
+const Card = ({ data }) => {
 	return (
 		<>
-			<div className="w-60 h-80 bg-zinc-700 rounded-xl "></div>
+			<div className="relative flex-shrink-0 px-8 py-8 overflow-hidden text-white h-60 w-52 bg-zinc-700 rounded-3xl">
+				<FaRegFileAlt />
+				<p className="mt-5 text-sm font-semibold leading-tight">{data.desc}</p>
+				{/* footer */}
+				<div className="absolute bottom-0 left-0 w-full ">
+					<div className="flex items-center justify-between px-8 py-2 mb-3">
+						<h5>{data.fileSize}</h5>
+						<span className="flex items-center justify-center rounded-full h-7 w-7 bg-zinc-800">
+							{data.close ? (
+								<IoClose />
+							) : (
+								<LuDownload className="w-4 h-4 text-white" />
+							)}
+						</span>
+					</div>
+					{data.tag.isOpen && (
+						<div
+							className={`flex items-center justify-center w-full py-3 bg-${data.tag.tagColor}-500 `}
+						>
+							<h3 className="text-sm font-semibold">{data.tag.tagTitle}</h3>
+						</div>
+					)}
+				</div>
+			</div>
 		</>
 	);
 };
