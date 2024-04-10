@@ -4,7 +4,7 @@ import Foreground from "./components/Foreground";
 
 const App = () => {
 	return (
-		<div className=" relative w-full h-screen bg-zinc-900">
+		<div className="relative w-full h-screen bg-zinc-200">
 			<Background />
 			<Foreground />
 		</div>

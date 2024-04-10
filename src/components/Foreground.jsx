@@ -13,14 +13,14 @@ const Foreground = () => {
 		},
 		{
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-			fileSize: ".9mb",
+			fileSize: ".2mb",
 			close: true,
 			tag: { isOpen: true, tagTitle: "Download Now", tagColor: "blue" },
 		},
 		{
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-			fileSize: ".9mb",
-			close: true,
+			fileSize: ".7mb",
+			close: false,
 			tag: { isOpen: false, tagTitle: "Download Now", tagColor: "green" },
 		},
 	];
